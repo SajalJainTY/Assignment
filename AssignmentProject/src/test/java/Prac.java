@@ -14,6 +14,7 @@ public class Prac {
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		/* navigate to given url */
 		driver.get("https://stackoverflow.com/questions/31517561/highlight-text-using-selenium");
+		System.out.println("hi");
 		 
 	}
 }
