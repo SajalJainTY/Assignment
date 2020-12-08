@@ -24,22 +24,21 @@ String claimid="24";
 	Map<String, String> loginDetails = WebActionUtil.getLoginDetailsForAllRoles(empCode);
 	InitializePages pages = new InitializePages(driver, ETO, WebActionUtil);
 	/*Login to Application as employee*/
-//	pages.loginpage.loginToApplication(loginDetails.get("EmpCode"), loginDetails.get("Password"));
+	pages.loginpage.loginToApplication(loginDetails.get("EmpCode"), loginDetails.get("Password"));
 	/*Click Close Button*/
-//	pages.homePage.closeHCLBannerPopUp();
-//	/*Click Raise New Request button than click on Child education allowance*/
-//	pages.homePage.raiseNewRequest();
-//	/*Fill the Child allowance form*/
-//	pages.childEducationAllowancePage.applyoneTimeRegistration(ChildName, AcademicYear, FromDate, ToDate, grade, Amount, SchoolName, Remarks, WebActionUtil.getSampleFilePath(fileFormat));
-//	/*Click initiate claim button*/
-//	pages.childEducationAllowancePage.clickInitiateClaim();
-//	/*Click confirm and initiate button*/
-//	pages.childEducationAllowancePage.clickConfirmAndInitiate();
-//	pages.homePage.goToHome();
-//	claimid = pages.homePage.retrieveClaimId();
+	pages.homePage.closeHCLBannerPopUp();
+	/*Click Raise New Request button than click on Child education allowance*/
+	pages.homePage.raiseNewRequest();
+	/*Fill the Child allowance form*/
+	pages.childEducationAllowancePage.applyoneTimeRegistration(ChildName, AcademicYear, FromDate, ToDate, grade, Amount, SchoolName, Remarks, WebActionUtil.getSampleFilePath(fileFormat));
+	/*Click initiate claim button*/
+	pages.childEducationAllowancePage.clickInitiateClaim();
+	/*Click confirm and initiate button*/
+	pages.childEducationAllowancePage.clickConfirmAndInitiate();
+	pages.homePage.goToHome();
+	claimid = pages.homePage.retrieveClaimId();
 	/*logout from application*/
-//	pages.homePage.logout();
-	
+	pages.homePage.logout();
 	/*Login to Application as RM*/
 	pages.loginpage.loginToApplication(loginDetails.get("RM"), loginDetails.get("Password"));
 	/*Click Close Button*/
@@ -83,8 +82,6 @@ String claimid="24";
 	/*Click Pending for approval tab*/
 	pages.pendingActionsPage.pendingAprovelbtn();
 	/*CLick on Approve button*/
-
-
 	pages.pendingActionsPage.referApproveClaim(claimid);
 	/*Click Submit button*/
 	pages.pendingActionsPage.clickOnSubmitButton();
@@ -103,8 +100,6 @@ String claimid="24";
 	/*Click Pending for approval tab*/
 	pages.pendingActionsPage.pendingAprovelbtn();
 	/*CLick on Approve button*/
-	
-
 	pages.pendingActionsPage.referApproveClaim(claimid);
 	/*Click Submit button*/
 	pages.pendingActionsPage.clickOnSubmitButton();
@@ -116,7 +111,6 @@ String claimid="24";
 	pages.previousRecordsPage.validateStatusApproveTxt(empCode, expectedStatusES1Login);
 	/*Logout from application*/
 	pages.homePage.logout();
-	
 	/*Login to Application as ES2*/
 	pages.loginpage.loginToApplication(loginDetails.get("ES2"), loginDetails.get("Password"));
 	/*Click Close Button*/
@@ -191,8 +185,6 @@ String claimid="24";
 	/*Click Pending for approval tab*/
 	pages.pendingActionsPage.pendingAprovelbtn();
 	/*CLick on Approve button*/
-
-
 	pages.pendingActionsPage.referApproveClaim(claimid);
 	/*Click Submit button*/
 	pages.pendingActionsPage.clickOnSubmitButton();
@@ -211,8 +203,6 @@ String claimid="24";
 	/*Click Pending for approval tab*/
 	pages.pendingActionsPage.pendingAprovelbtn();
 	/*CLick on Approve button*/
-	
-
 	pages.pendingActionsPage.referApproveClaim(claimid);
 	/*Click Submit button*/
 	pages.pendingActionsPage.clickOnSubmitButton();
@@ -224,7 +214,6 @@ String claimid="24";
 	pages.previousRecordsPage.validateStatusApproveTxt(empCode, expectedStatusES1Login);
 	/*Logout from application*/
 	pages.homePage.logout();
-	
 	/*Login to Application as ES2*/
 	pages.loginpage.loginToApplication(loginDetails.get("ES2"), loginDetails.get("Password"));
 	/*Click Close Button*/
@@ -247,7 +236,7 @@ String claimid="24";
 	pages.loginpage.loginToApplication(loginDetails.get("EmpCode"), loginDetails.get("Password"));
 	/*Click Close Button*/
 	pages.homePage.closeHCLBannerPopUp();
-
+	
 
 }
 }
