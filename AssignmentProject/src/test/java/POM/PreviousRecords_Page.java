@@ -306,7 +306,7 @@ public class PreviousRecords_Page {
 			WebActionUtil.waitForElement(fetchClaimID(sapID), "Claim ID Text");
 			String claimID = fetchClaimID(sapID).getText();
 			WebActionUtil.validatetext(expectedStatus, fetchStatusRejected(claimID), "Status Reject Text",
-					expectedStatus + " status is displayed", expectedStatus + " status is not displayed");
+					expectedStatus + " status is displayed", expectedStatus + " status is not displayed","blue");
 		} catch (Exception e) {
 			WebActionUtil.error(e.getMessage());
 			WebActionUtil.fail(expectedStatus + " is not displayed");
@@ -326,7 +326,7 @@ public class PreviousRecords_Page {
 			WebActionUtil.waitForElement(fetchClaimID(sapID), "Claim ID Text");
 			String claimID = fetchClaimID(sapID).getText();
 			WebActionUtil.validatetext(expectedStatus, fetchStatusApproved(claimID), "Status Approved Text",
-					expectedStatus + " status is displayed", expectedStatus + " status is not displayed");
+					expectedStatus + " status is displayed", expectedStatus + " status is not displayed","blue");
 		} catch (Exception e) {
 			WebActionUtil.error(e.getMessage());
 			WebActionUtil.fail(expectedStatus + " is not displayed");
@@ -575,7 +575,7 @@ public class PreviousRecords_Page {
 			WebActionUtil.waitForAngularPageload();
 			WebActionUtil.waitForElement(txtPreviousRecords, "Previous Records Text");
 			WebActionUtil.validatetext("Previous Records", txtPreviousRecords, "Previous Records Text",
-					"Previous Records Page is displayed", "Previous Records Page is not displayed");
+					"Previous Records Page is displayed", "Previous Records Page is not displayed","blue");
 		} catch (Exception e) {
 			WebActionUtil.error(e.getMessage());
 			WebActionUtil.fail("Previous Records Page is not displayed");
